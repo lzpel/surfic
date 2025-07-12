@@ -4,7 +4,7 @@ SHELL := /bin/bash
 create:
 	npx create-next-app@latest $$(basename $$(pwd)) --no-tailwind --no-turbopack --yes
 generate:
-	cdnpm install
+	npm install
 run:
 	npm run dev
 deploy:
