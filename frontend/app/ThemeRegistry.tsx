@@ -23,7 +23,7 @@ const darkTheme = createTheme({
 		},
 	},
 	typography: {
-		fontSize: 12, // デフォルト文字サイズ（例: 通常は14）
+		fontSize: 14, // デフォルト文字サイズ（例: 通常は14）
 		h1: { fontSize: '2rem' }, // 通常は約6rem → ここで小さくする
 		h2: { fontSize: '1.8rem' },
 		h3: { fontSize: '1.6rem' },
