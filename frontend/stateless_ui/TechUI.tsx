@@ -79,15 +79,11 @@ const Horizon = (props: {
 			<bufferGeometry>
 				<bufferAttribute
 					attach='attributes-position'
-					array={new Float32Array(circle_vector.flat())}
-					count={circle_vector.length}
-					itemSize={3}
+					args={[new Float32Array(circle_vector.flat()), 3]}
 				/>
 				<bufferAttribute
 					attach='index'
-					array={new Uint32Array(face_index)}
-					count={face_index.length}
-					itemSize={1}
+					args={[new Uint32Array(face_index), 1]}
 				/>
 			</bufferGeometry>
 			{(three.scene.background instanceof THREE.Color) &&
@@ -97,15 +93,11 @@ const Horizon = (props: {
 			<bufferGeometry>
 				<bufferAttribute
 					attach='attributes-position'
-					array={new Float32Array(circle_vector.flat())}
-					count={circle_vector.length}
-					itemSize={3}
+					args={[new Float32Array(circle_vector.flat()), 3]}
 				/>
 				<bufferAttribute
 					attach='index'
-					array={new Uint32Array(line_index)}
-					count={line_index.length}
-					itemSize={1}
+					args={[new Uint32Array(line_index), 1]}
 				/>
 			</bufferGeometry>
 			{props.lineMaterial}
@@ -134,21 +126,15 @@ const Green=(props:{radius: number})=>{
 			<bufferGeometry>
 				<bufferAttribute
 					attach='attributes-position'
-					array={new Float32Array(v)}
-					count={v.length / 3}
-					itemSize={3}
+					args={[new Float32Array(v), 3]}
 				/>
 				<bufferAttribute
 					attach='index'
-					array={new Uint32Array(i)}
-					count={i.length}
-					itemSize={1}
+					args={[new Uint32Array(i), 1]}
 				/>
 				<bufferAttribute
 					attach='attributes-color'
-					array={new Float32Array(v.map(()=>Math.random()))}
-					count={v.length / 3}
-					itemSize={3}
+					args={[new Float32Array(v.map(()=>Math.random())), 3]}
 				/>
 			</bufferGeometry>
 			<lineBasicMaterial vertexColors={true}/>
