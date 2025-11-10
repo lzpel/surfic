@@ -38,15 +38,11 @@ const Earth=(props: {
 				<bufferGeometry>
 					<bufferAttribute
 						attach='attributes-position'
-						array={global_v}
-						count={global_v.length / 3}
-						itemSize={3}
+						args={[global_v, 3]}
 					/>
 					<bufferAttribute
 						attach='index'
-						array={global_i}
-						count={global_i.length}
-						itemSize={1}
+						args={[global_i, 1]}
 					/>
 				</bufferGeometry>
 				{props.lineMaterial}
