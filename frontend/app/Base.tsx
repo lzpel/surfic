@@ -13,18 +13,19 @@ export default function Base(props: {
 		<NavUI container={PartialContainerUI}>
 			<IconTextUI
 				key="logo"
+				href="/"
 				icon={
-					<Image src={"/logo.svg"} alt='mimamori logo' height={50} width={100}/>
+					<Image src={"/logo.svg"} alt='mimamori logo' width={186} height={126} style={{ height: "50px", width: "auto" }}/>
 				}
 			/>
 			<Stack direction="row">
-				<IconTextUI key={"news"} icon={<CampaignIcon/>}>
+				<IconTextUI key={"news"} href="/news" icon={<CampaignIcon/>}>
 					ニュース
 				</IconTextUI>
-				<IconTextUI key={"product"} icon={<CategoryIcon/>}>
+				<IconTextUI key={"product"} href="/product" icon={<CategoryIcon/>}>
 					製品・サービス
 				</IconTextUI>
-				<IconTextUI key={"about"} icon={<InfoIcon/>}>
+				<IconTextUI key={"about"} href="/about" icon={<InfoIcon/>}>
 					会社情報
 				</IconTextUI>
 			</Stack>

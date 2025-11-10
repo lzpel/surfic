@@ -10,7 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import Article, { ArticleInheritedProps } from "@/app/Article";
+import Article, { ArticleInheritedProps } from "@/stateless_ui/Article";
 export default function Contact(props: ArticleInheritedProps){
 	const [form, setForm] = React.useState({
 		company: "",
