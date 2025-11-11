@@ -8,7 +8,7 @@ export default function About(){
 			社名 サーフィック合同会社 / Surfic LLC
 		</Row>
 		<Row>
-			所在 神奈川県横浜市鶴見区４－４５－５
+			所在 神奈川県横浜市鶴見区４－４５－５ クレヴィスタ横浜鶴見４０４
 		</Row>
 		<Row>
 			CEO / 代表社員 三角 聡
