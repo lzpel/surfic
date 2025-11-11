@@ -1,10 +1,10 @@
-import getNewsPosts, { NewsPost } from "@/lib/posts";
-import Article, { ArticleInheritedProps } from "@/stateless_ui/Article";
+import posts, { Markdown } from "@/app/news/posts";
+import Article from "@/stateless_ui/Article";
 import { NewsList } from "./newslist";
 
-export default function News(props: ArticleInheritedProps){
-	const posts=getNewsPosts();
-	return <Article title="ニュース" link="/news" {...props}>
-		<NewsList posts={posts}/>
+export default function News(){
+	const postArray=posts();
+	return <Article title="ニュース">
+		<NewsList posts={postArray}/>
 	</Article>
 }

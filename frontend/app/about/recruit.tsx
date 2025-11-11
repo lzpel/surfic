@@ -1,12 +1,14 @@
-import Article, { ArticleInheritedProps } from "@/stateless_ui/Article";
+import Article from "@/stateless_ui/Article";
 import { Typography } from "@mui/material";
 
-export default function Recruit(props: ArticleInheritedProps){
-	return <Article title="会社情報" link="/recruit" {...props}>
+export default function Recruit(){
+	return <Article title="会社情報">
 		<Typography variant="body1" gutterBottom>
 			サーフィック合同会社
 			<br/>
 			英文社名 Surfic LLC
+			<br/>
+			所在：神奈川県横浜市鶴見区４－４５－５
 			<br/>
 			TEL: 070-3780-7659  Email: info@surfic.com
 			<br/>

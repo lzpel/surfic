@@ -1,38 +1,35 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { fileURLToPath } from "url";
 
-export type NewsPost = {
-	slug: string;
+export type Markdown = {
+	index: number;
 	title: string;
 	date: string; // ISO string
-	excerpt?: string;
+	description?: string;
+	content: string;
 };
 
-const NEWS_DIR = path.join(process.cwd(), "content", "news");
+const NEWS_DIR = path.join(fileURLToPath(import.meta.url), "..",  "posts");
 
-export default function getNewsPosts(): NewsPost[] {
-	const files = fs
-		.readdirSync(NEWS_DIR)
-		.filter((file) => file.endsWith(".md") || file.endsWith(".mdx"));
-
-	const posts: NewsPost[] = files.map((fileName) => {
+export default function posts(): Markdown[] {
+	const files = fs.readdirSync(NEWS_DIR).filter((file) => file.endsWith(".md") || file.endsWith(".mdx"));
+	const posts: Markdown[] = files.map((fileName) => {
 		const fullPath = path.join(NEWS_DIR, fileName);
 		const fileContents = fs.readFileSync(fullPath, "utf8");
 		const { data, content } = matter(fileContents);
-
-		const slug = fileName.replace(/\.mdx?$/, "");
-
 		return {
-			slug,
-			title: data.title ?? slug,
+			index: Number(fileName.replace(/[^0-9]*$/, "")),
+			title: data.title ?? "",
 			date: data.date ?? "",
-			excerpt:
+			description:
 				data.excerpt ??
 				content
 					.replace(/[#>*\-`]/g, "") // 簡易的にマークアップを削る
 					.slice(0, 100) + "...",
-		};
+			content: content,
+		} as Markdown;
 	});
 
 	// 新しい日付が上に来るようにソート

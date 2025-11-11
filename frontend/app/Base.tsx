@@ -6,6 +6,7 @@ import Image from "next/image";
 import CampaignIcon from '@mui/icons-material/Campaign';
 import CategoryIcon from '@mui/icons-material/Category';
 import InfoIcon from '@mui/icons-material/Info';
+import BreadUI from '@/stateless_ui/BreadUI';
 export default function Base(props: {
 	children?:React.ReactNode
 }) {
@@ -31,6 +32,7 @@ export default function Base(props: {
 			</Stack>
 		</NavUI>
 		<PartialContainerUI>
+			<BreadUI/>
 			{props.children}
 		</PartialContainerUI>
 	</>

@@ -1,7 +1,7 @@
-import Article, { ArticleInheritedProps } from "@/stateless_ui/Article";
+import Article from "@/stateless_ui/Article";
 
-export default function Product(props: ArticleInheritedProps){
-	return <Article title="製品・サービス" link="/product" {...props}>
+export default function Product(){
+	return <Article title="製品・サービス">
 		comming soon...
 	</Article>
 }

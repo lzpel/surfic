@@ -3,15 +3,14 @@ import {
   Box,
   Button,
   Checkbox,
-  FormControl,
   FormControlLabel,
   FormGroup,
   TextField,
   Typography,
 } from "@mui/material";
 import React from "react";
-import Article, { ArticleInheritedProps } from "@/stateless_ui/Article";
-export default function Contact(props: ArticleInheritedProps){
+import Article from "@/stateless_ui/Article";
+export default function Contact(){
 	const [form, setForm] = React.useState({
 		company: "",
 		department: "",
@@ -42,7 +41,7 @@ export default function Contact(props: ArticleInheritedProps){
 		alert("送信されました！");
 	};
 
-	return <Article title="お問い合わせ" link="/contact" {...props}>
+	return <Article title="お問い合わせ">
 		サーフィック合同会社へのお問い合わせ、見積もり依頼は、以下のフォームからお気軽にお寄せ下さい。弊社担当者が後程折り返しご連絡させていただきます。
 		<Box component="form" onSubmit={handleSubmit}>
 		<Typography variant="h5" gutterBottom>
