@@ -1,4 +1,4 @@
-import {Stack, StackProps, Typography, TypographyProps} from "@mui/material"
+import {Stack, Typography, TypographyProps} from "@mui/material"
 import * as React from "react";
 
 type DisplayType = TypographyProps["display"]

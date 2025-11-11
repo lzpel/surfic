@@ -16,9 +16,11 @@ export default function Base(props: {
 				key="logo"
 				href="/"
 				icon={
-					<Image src={"/logo.svg"} alt='mimamori logo' width={186} height={126} style={{ height: "50px", width: "auto" }}/>
+					<Image src={"/logo.svg"} alt='surfic' width={186} height={126} style={{ height: "30px", width: "auto" }}/>
 				}
-			/>
+			>
+				サーフィック合同会社	
+			</IconTextUI>
 			<Stack direction="row">
 				<IconTextUI key={"news"} href="/news" icon={<CampaignIcon/>}>
 					ニュース
