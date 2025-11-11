@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import Article from "@/stateless_ui/Article";
+import Article from "@/stateless_ui/ArticleUI";
 export default function Contact(){
 	const [form, setForm] = React.useState({
 		company: "",

@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: "Surfic合同会社",
-	description: "Surfic portal site",
+	title: "サーフィック合同会社",
+	description: "Surfic LLC",
 };
 
 export default function RootLayout(

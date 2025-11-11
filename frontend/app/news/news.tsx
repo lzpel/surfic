@@ -1,5 +1,5 @@
 import posts, { Markdown } from "@/app/news/posts";
-import Article from "@/stateless_ui/Article";
+import Article from "@/stateless_ui/ArticleUI";
 import { NewsList } from "./newslist";
 
 export default function News(){

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Metadata } from "next";
-import Article from "@/stateless_ui/Article";
+import Article from "@/stateless_ui/ArticleUI";
 import posts, { Markdown } from "../posts";
 
 type Params = { index: string };

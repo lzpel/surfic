@@ -1,5 +1,5 @@
-import Recruit from "./recruit";
+import About from "./about";
 
 export default function Home() {
-	return <Recruit/>
+	return <About/>
 }
