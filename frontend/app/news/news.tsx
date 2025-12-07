@@ -1,4 +1,4 @@
-import posts, { Markdown } from "@/app/news/posts";
+import posts from "@/app/news/posts";
 import Article from "@/stateless_ui/ArticleUI";
 import { NewsList } from "./newslist";
 

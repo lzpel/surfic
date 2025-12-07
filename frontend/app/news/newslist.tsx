@@ -1,33 +1,28 @@
 // components/NewsList.tsx
-import Link from "next/link";
 import type { Markdown } from "@/app/news/posts";
-import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
 
 type Props = {
   posts: Markdown[];
 };
 
-function formatDate(dateStr: string) {
-  if (!dateStr) return "";
-  return new Intl.DateTimeFormat("ja-JP", {
-    dateStyle: "medium",
-  }).format(new Date(dateStr));
-}
-
 export function NewsList({ posts }: Props) {
-	const a=<CardMedia component="img" height="140" />
-	return posts.map((post) => (
-		<Card key={post.index}  component={"a"} href={`/news/${post.index}`}>
-			<CardActionArea>
-				<CardContent>
-					<Typography gutterBottom variant="h5" component="div">
-						{post.date} {post.title}
-					</Typography>
-					<Typography variant="body2" sx={{ color: 'text.secondary' }}>
-						{post.description}
-					</Typography>
-				</CardContent>
-			</CardActionArea>
-		</Card>
-	))
+  return (
+    <div className="space-y-4">
+      {posts.map((post) => (
+        <a
+          key={post.index}
+          href={`/news/${post.index}`}
+          className="block rounded-lg border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow"
+        >
+          <div className="p-4">
+            <h3 className="text-lg font-semibold mb-1">
+              {post.date} {post.title}
+            </h3>
+
+            <p className="text-sm text-gray-600">{post.description}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  );
 }
