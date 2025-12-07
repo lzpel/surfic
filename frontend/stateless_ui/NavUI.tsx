@@ -42,25 +42,25 @@ const NavUI: React.FC<NavUIProps> = (props) => {
 	const otherChildren = childrenArray.filter((v) => !is_logo_key(v));
 
 	return (
-			<Container>
-				{/* ← ここで必ず flex 一行にする */}
-				<div className="flex h-full w-full items-center flex-nowrap overflow-hidden">
-					{logoChildren.length > 0 && (
-						<NavBarPadding className="shrink-0">
-							{logoChildren}
-						</NavBarPadding>
-					)}
+		<Container>
+			{/* ← ここで必ず flex 一行にする */}
+			<div className="flex h-full w-full items-center flex-nowrap overflow-hidden">
+				{logoChildren.length > 0 && (
+					<NavBarPadding className="shrink-0">
+						{logoChildren}
+					</NavBarPadding>
+				)}
 
-					{/* 縦の仕切り線 */}
-					<div className="mx-4 h-8 w-px shrink-0 bg-slate-200/80" />
+				{/* 縦の仕切り線 */}
+				<div className="mx-4 h-8 w-px shrink-0 bg-slate-200/80" />
 
-					{otherChildren.length > 0 && (
-						<NavBarPadding className="ml-auto justify-end gap-4 min-w-0">
-							{otherChildren}
-						</NavBarPadding>
-					)}
-				</div>
-			</Container>
+				{otherChildren.length > 0 && (
+					<NavBarPadding className="ml-auto justify-end gap-4 min-w-0">
+						{otherChildren}
+					</NavBarPadding>
+				)}
+			</div>
+		</Container>
 	);
 };
 
