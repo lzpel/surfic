@@ -1,5 +1,4 @@
 import TechUI from "@/stateless_ui/TechUI";
-import Product from "./product/product";
 import Link from "next/link";
 
 export default function Home() {
@@ -7,7 +6,7 @@ export default function Home() {
 		<>
 			<TechUI />
 
-			<h1 className="mt-10 text-3xl font-bold text-green-600">
+			<h1 className="mt-10 text-2xl">
 				現在プロダクトを鋭意開発中です！公開をお楽しみに！
 			</h1>
 			{/* 🔥 Full-Width CTA Button */}
